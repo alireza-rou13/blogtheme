@@ -13488,6 +13488,8 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 	width: 100%;
 	height: inherit;
 	text-align: center;
+	position: relative;
+    top: 33%;
 }
 
 #networks .links a:hover {

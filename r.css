@@ -13805,9 +13805,9 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 		padding-top: 16px
 	}
 
-	#main-container #main {
+	/* #main-container #main {
 		margin-top: -172px
-	}
+	} */
 
 	.news-list[data-type="type-a"] .news-list-item {
 		margin-bottom: 31px
@@ -13865,9 +13865,9 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 		padding-top: 10px
 	}
 
-	#main-container #main {
+	/* #main-container #main {
 		margin-top: -157px
-	}
+	} */
 
 	.news-list[data-type="type-a"] .news-list-item {
 		margin-bottom: 24px

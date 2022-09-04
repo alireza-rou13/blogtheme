@@ -1427,6 +1427,49 @@
                     </div>
                   </div>
                 </check:if>
+                <check:if not index_selected>
+                  <box:post_detail>
+                    <div class="global-box fit-mode">
+                      <figure id=wide-thumbnail><img src="(*post_image*)" alt="(*post_title*)"></figure>
+                    </div>
+                    <div class="global-box fit-mode">
+                        <header class=page-locationbar>
+                            <div class=details-right><time datetime class=date data-fa-num=true>(*post_date*)</time>
+                                <div class=view-count data-fa-num=true>(*post_visits*)</div>
+                            </div>
+                            <!-- <div class=details-left><button type=button class=goto-comment-form><i
+                                        class="fas fa-comment-dots"></i></button><button type=button class=share-post
+                                    data-link=https://raisi.ir/5178
+                                    data-title="(*post_title*)"><i
+                                        class="fas fa-share-alt"></i></button><button type=button class=short-link
+                                    data-link=https://raisi.ir/5178><i class="fas fa-link"></i></button><input type=text
+                                    tabindex=-1 aria-hidden=true value=https://raisi.ir/5178></div> -->
+                        </header>
+                    </div>
+                    <div class="global-box on-post-page" id=main-middle-box>
+                        <article class=post-container>
+                            <!-- <h3 class=rootitr data-fa-num=true>دکتر رئیسی در جلسه ستاد ملی مقابله با کرونا:</h3> -->
+                            <h1 class=title data-fa-num=true>(*post_title*)</h1>
+                            <div class=content>
+                                <p>(*post_full_content*)</p>
+                            </div>
+                        </article>
+                    </div>
+                    <box:post_tags>
+                      <div class="global-box fit-mode appends-wrapper">
+                          <nav class=post-appends>
+                              <ul class=keywords>
+                                <view:post_tags>
+                                  <li>
+                                      <h3 class=keyword><a href="(*tag_link*)" data-fa-num=true>(*tag_name*)</a></h3>
+                                  </li>
+                                </view:post_tags>
+                              </ul>
+                          </nav>
+                      </div>
+                    </box:post_tags>
+                  </box:post_detail>
+                </check:if>
               </div>
               <div class="global-box" id="main-middle-box">
                 <box:post_list>

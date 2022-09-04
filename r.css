@@ -12441,7 +12441,7 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 .main-wrapper {
 	position: relative;
 	display: table;
-	width: 1200px;
+	/* width: 1200px; */
 	margin: 0 auto;
 	background: #f7f7f7
 }
@@ -13783,9 +13783,9 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 		width: 1100px
 	}
 
-	.main-wrapper {
+	/* .main-wrapper {
 		width: 1360px
-	}
+	} */
 
 	#header .container {
 		height: 220px
@@ -13831,9 +13831,9 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 		width: 1000px
 	}
 
-	.main-wrapper {
+	/* .main-wrapper {
 		width: 1260px
-	}
+	} */
 
 	#header:after {
 		height: 245px

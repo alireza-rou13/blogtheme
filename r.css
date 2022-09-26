@@ -14,8 +14,8 @@
 
 @font-face {
 	font-family: 'Sahel';
-	src: url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-SemiBold.eot);
-	src: local('Sahel SemiBold'), local('Sahel-SemiBold'), url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-SemiBold.eot?#iefix) format('embedded-opentype'), url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-SemiBold.woff2) format('woff2'), url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-SemiBold.woff) format('woff'), url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-SemiBold.ttf) format('truetype'), url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-SemiBold.svg#Sahel-SemiBold) format('svg');
+	src: url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-SemiBold.eot);
+	src: local('Sahel SemiBold'), local('Sahel-SemiBold'), url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-SemiBold.eot?#iefix) format('embedded-opentype'), url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-SemiBold.woff2) format('woff2'), url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-SemiBold.woff) format('woff'), url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-SemiBold.ttf) format('truetype'), url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-SemiBold.svg#Sahel-SemiBold) format('svg');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -23,8 +23,8 @@
 
 @font-face {
 	font-family: 'Sahel';
-	src: url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-Light.eot);
-	src: local('Sahel Light'), local('Sahel-Light'), url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-Light.eot?#iefix) format('embedded-opentype'), url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-Light.woff2) format('woff2'), url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-Light.woff) format('woff'), url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-Light.ttf) format('truetype'), url(https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font/dist/Sahel-Light.svg#Sahel-Light) format('svg');
+	src: url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-Light.eot);
+	src: local('Sahel Light'), local('Sahel-Light'), url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-Light.eot?#iefix) format('embedded-opentype'), url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-Light.woff2) format('woff2'), url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-Light.woff) format('woff'), url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-Light.ttf) format('truetype'), url(https://cdn.statically.io/gh/rastikerdar/sahel-font/81ea3050/dist/Sahel-Light.svg#Sahel-Light) format('svg');
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;

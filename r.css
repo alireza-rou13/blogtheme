@@ -12442,19 +12442,9 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4b04c', endColorstr='#496341', GradientType=1)
 }
 
-#header:after {
-	content: "";
-	position: absolute;
-	z-index: 0;
-	height: 260px;
-	width: 150px;
-	left: 0;
-	top: -30px;
-	opacity: .15
-}
 
 #header .container {
-	height: 300px;
+	/* height: 300px; */
 	position: relative;
 	overflow: hidden;
 	z-index: 1
@@ -13768,9 +13758,9 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 		width: 1360px
 	} */
 
-	#header .container {
+	/* #header .container {
 		height: 220px
-	}
+	} */
 
 	#header .text-logo {
 		bottom: 40px;
@@ -13820,9 +13810,9 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 		height: 245px
 	}
 
-	#header .container {
+	/* #header .container {
 		height: 205px
-	}
+	} */
 
 	#header .col-1 {
 		padding-right: 0

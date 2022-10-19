@@ -11420,7 +11420,7 @@ table tr td button {
 	position: relative
 }
 
-.global-box .global-header:after {
+/* .global-box .global-header:after {
 	content: "";
 	position: absolute;
 	bottom: -2px;
@@ -11428,7 +11428,7 @@ table tr td button {
 	right: 32px;
 	width: 64px;
 	background: #496341
-}
+} */
 
 .global-box .global-header.search-mode {
 	background: #e6e6e6;

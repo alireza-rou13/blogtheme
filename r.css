@@ -11749,7 +11749,6 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 
 #sidebar-video .video-details .title {
 	right: 16px;
-	width: calc(100% - 76px - 16px);
 	padding-left: 8px;
 	font-size: 16px;
 	line-height: 24px;
@@ -12688,7 +12687,7 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 #video {
     display: flex;
 }
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
 	#video {
 		display:block;
 	}

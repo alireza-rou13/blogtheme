@@ -12689,6 +12689,9 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
     display: flex;
 }
 @media only screen and (max-width:500px) {
+	#video {
+		display:block;
+	}
 	#video .col-6 {
 		width: 100%;
 	}

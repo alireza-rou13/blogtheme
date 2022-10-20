@@ -47,7 +47,7 @@
   <meta name="msapplication-TileImage" content="https://raisi.ir/ms-icon-144x144.png" />
   <meta name="theme-color" content="#1d7633" />
   <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/alireza-rou13/blogtheme/r.css" /> -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.statically.io/gh/alireza-rou13/blogtheme/f38622e3/r.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.statically.io/gh/alireza-rou13/blogtheme/01ebc006/r.css" />
   <!-- <link rel="stylesheet" type="text/css" href="https://cdn.bayan.ir/blog/templates/shared/css/icons-fa.css" /> -->
 
   <script id="savepage-shadowloader" type="application/javascript">
@@ -401,38 +401,40 @@
                 </box:post_list>
               </div>
               <div class="row">
-              <div class="global-box" id="video">
-                <box:post_list max="2" category="فیلم">
-                  <header class="global-header">
-                    <h3 class="global-header-title">
-                      <a href="/category/فیلم">
-                        فیلم
-                      </a>
-                    </h3>
-                    <div class="global-header-archive">
-                      <a href="/category/فیلم">
-                        آرشیو فیلم
-                      </a>
-                    </div>
-                  </header>
-                  <view:post_list>
-                    <div class="col-sm-12 col-xs-6">
-                    <article itemscope="" itemtype="http://schema.org/CreativeWork" id="sidebar-video">
-                      <!-- <div class="video-player"> -->
-                        (*post_full_content*)
-                      <!-- </div> -->
-                      <div class="video-details">
-                        <h3 class="title">
-                          <a itemprop="url"
-                            href="(*post_link*)"
-                            data-fa-num="true">(*post_title*)
-                          </a>
-                        </h3>
+                <div class="global-box">
+                  <box:post_list max="2" category="فیلم">
+                    <header class="global-header">
+                      <h3 class="global-header-title">
+                        <a href="/category/فیلم">
+                          فیلم
+                        </a>
+                      </h3>
+                      <div class="global-header-archive">
+                        <a href="/category/فیلم">
+                          آرشیو فیلم
+                        </a>
                       </div>
-                    </article></div>
-                  </view:post_list>
-                </box:post_list>
-              </div></div>
+                    </header>
+                    <div id="video">
+                      <view:post_list>
+                        <div class="col col-sm-12 col-6">
+                          <article itemscope="" itemtype="http://schema.org/CreativeWork" id="sidebar-video">
+                            <!-- <div class="video-player"> -->
+                            (*post_full_content*)
+                            <!-- </div> -->
+                            <div class="video-details">
+                              <h3 class="title">
+                                <a itemprop="url" href="(*post_link*)" data-fa-num="true">(*post_title*)
+                                </a>
+                              </h3>
+                            </div>
+                          </article>
+                        </div>
+                      </view:post_list>
+                    </div>
+                  </box:post_list>
+                </div>
+              </div>
             </main>
           </div>
         </div>
@@ -471,8 +473,8 @@
       </div>
     </div>
   </footer>
-  <script data-savepage-type="" type="text/plain" src="/js/jquery.js"></script>
-  <script data-savepage-type="" type="text/plain">
+  <script src="https://cdn.statically.io/gh/alireza-rou13/blogtheme/01ebc006/js/jquery.js"></script>
+  <script type="text/plain">
     (function () {var INSTALL_OPTIONS = []; !function(){
         /*! instant.page v5.1.0 - (C) 2019-2020 Alexandre Dieulot - https://instant.page/license */
         "use strict";let t,e;const n=new Set,o=document.createElement("link"),i=o.relList&&o.relList.supports&&o.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype;console.log(i);const s="instantAllowQueryString"in document.body.dataset,a="instantAllowExternalLinks"in document.body.dataset,r="instantWhitelist"in document.body.dataset,c="instantMousedownShortcut"in document.body.dataset;let d=65,l=!1,u=!1,f=!1;if("instantIntensity"in document.body.dataset){const t=document.body.dataset.instantIntensity;if("mousedown"==t.substr(0,"mousedown".length))l=!0,"mousedown-only"==t&&(u=!0);else if("viewport"==t.substr(0,"viewport".length))navigator.connection&&(navigator.connection.saveData||navigator.connection.effectiveType&&navigator.connection.effectiveType.includes("2g"))||("viewport"==t?document.documentElement.clientWidth*document.documentElement.clientHeight<45e4&&(f=!0):"viewport-all"==t&&(f=!0));else{const e=parseInt(t);isNaN(e)||(d=e)}}if(i){const n={capture:!0,passive:!0};if(u||document.addEventListener("touchstart",(function(t){e=performance.now();const n=t.target.closest("a");if(!p(n))return;h(n.href)}),n),l?c||document.addEventListener("mousedown",(function(t){const e=t.target.closest("a");if(!p(e))return;h(e.href)}),n):document.addEventListener("mouseover",(function(n){if(performance.now()-e<1111)return;const o=n.target.closest("a");if(!p(o))return;o.addEventListener("mouseout",m,{passive:!0}),t=setTimeout(()=>{h(o.href),t=void 0},d)}),n),c&&document.addEventListener("mousedown",(function(t){if(performance.now()-e<1111)return;const n=t.target.closest("a");if(t.which>1||t.metaKey||t.ctrlKey)return;if(!n)return;n.addEventListener("click",(function(t){1337!=t.detail&&t.preventDefault()}),{capture:!0,passive:!1,once:!0});const o=new MouseEvent("click",{view:window,bubbles:!0,cancelable:!1,detail:1337});n.dispatchEvent(o)}),n),f){let t;t=window.requestIdleCallback?t=>{requestIdleCallback(t,{timeout:1500})}:t=>{t()},t(()=>{const t=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){const n=e.target;t.unobserve(n),h(n.href)}})});document.querySelectorAll("a").forEach(e=>{p(e)&&t.observe(e)})})}}function m(e){e.relatedTarget&&e.target.closest("a")==e.relatedTarget.closest("a")||t&&(clearTimeout(t),t=void 0)}function p(t){if(t&&t.href&&(!r||"instant"in t.dataset)&&(a||t.origin==location.origin||"instant"in t.dataset)&&["http:","https:"].includes(t.protocol)&&("http:"!=t.protocol||"https:"!=location.protocol)&&(s||!t.search||"instant"in t.dataset)&&!(t.hash&&t.pathname+t.search==location.pathname+location.search||"noInstant"in t.dataset))return!0}function h(t){if(n.has(t))return;const e=document.createElement("link");e.rel="prefetch",e.href=t,document.head.appendChild(e),n.add(t)}}();})()

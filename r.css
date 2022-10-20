@@ -12694,4 +12694,35 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 	#video .col-6 {
 		width: 100%;
 	}
+	#footer .vector-logo {
+		display: block;
+		float: right;
+		width: auto;
+		height: auto;
+		line-height: 100px;
+		margin-left: 16px;
+		overflow: visible;
+	}
+	#footer .vector-logo figcaption{
+		position: unset;
+	}
+	#footer .vector-logo figcaption {
+		display: block;
+	}
+	#footer .col {
+		position: relative;
+		width: 100%;
+	}
+	#footer.index-footer {
+		margin-bottom: 0;
+	}
+	#footer .container {
+		height: auto;
+	}
+	#footer {
+		background: #496341;
+	}
+	#footer .main-menu>ul {
+		display: block;
+	}
 }

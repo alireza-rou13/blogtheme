@@ -14492,3 +14492,6 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 		min-width: 25px
 	}
 }
+#video {
+    display: flex;
+}

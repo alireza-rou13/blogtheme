@@ -10784,7 +10784,7 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 
 
 #main-container>.container>.row {
-	flex-direction: row-reverse;
+	/* flex-direction: row-reverse; */
 	padding-bottom: 0
 }
 

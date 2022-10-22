@@ -47,7 +47,7 @@
   <meta name="msapplication-TileImage" content="https://raisi.ir/ms-icon-144x144.png" />
   <meta name="theme-color" content="#1d7633" />
   <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/alireza-rou13/blogtheme/r.css" /> -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.statically.io/gh/alireza-rou13/blogtheme/30a2b146/r.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.statically.io/gh/alireza-rou13/blogtheme/ac62c92c/r.css" />
   <!-- <link rel="stylesheet" type="text/css" href="https://cdn.bayan.ir/blog/templates/shared/css/icons-fa.css" /> -->
 
   <script id="savepage-shadowloader" type="application/javascript">
@@ -232,81 +232,142 @@
                   </box:post_detail>
                 </check:if>
               </div>
-              <div class="global-box" id="main-middle-box">
-                <box:post_list max="6" category="اخبار">
-                  <div class="news-list" data-type="type-b">
+              <check:if index_selected>
+                <div class="global-box" id="main-middle-box">
+                  <box:post_list max="6" category="اخبار">
+                    <div class="news-list" data-type="type-b">
+                      <header class="global-header">
+                        <h3 class="global-header-title">
+                          <a href="/category/اخبار">
+                            اخبار
+                          </a>
+                        </h3>
+                        <div class="global-header-archive">
+                          <a href="/category/اخبار">
+                            آرشیو
+                          </a>
+                        </div>
+                      </header>
+                      <section class="news-list-items">
+                          <view:post_list>
+                            <article itemscope="" itemtype="http://schema.org/CreativeWork" class="news-list-item">
+                              <figure class="news-list-item-thumbnail">
+                                <a href="(*post_link*)">
+                                  <img itemprop="image" src="(*post_image*)"
+                                    src=(*post_image*)" alt="(*post_title*)"
+                                    onerror="this.src='(*post_image*)';this.style.background='#496341'"
+                                    style="background: rgb(73, 99, 65);">
+                                </a>
+                              </figure>
+                              <h4 class="news-list-item-rootitr" style="white-space: normal;">
+                                <a href="(*post_link*)" data-fa-num="true"> (*post_date format="%A %e %B %Y"*) </a>
+                              </h4>
+                              <h3 class="news-list-item-title" itemprop="headline">
+                                <a itemprop="url"
+                                  href="(*post_link*)"
+                                  data-fa-num="true">
+                                  (*post_title*)
+                                </a>
+                              </h3>
+                            </article>
+                          </view:post_list>
+                        </section>
+                    </div>
+                  </box:post_list>
+                </div>
+                <box:post_list max="2" category="فیلم">
+                  <div class="global-box" id="main-middle-box">
                     <header class="global-header">
                       <h3 class="global-header-title">
-                        <a href="/category/اخبار">
-                          اخبار
+                        <a href="/category/فیلم">
+                          فیلم
                         </a>
                       </h3>
                       <div class="global-header-archive">
-                        <a href="/category/اخبار">
-                          آرشیو
+                        <a href="/category/فیلم">
+                          آرشیو فیلم
                         </a>
                       </div>
                     </header>
-                    <section class="news-list-items">
-                        <view:post_list>
-                          <article itemscope="" itemtype="http://schema.org/CreativeWork" class="news-list-item">
-                            <figure class="news-list-item-thumbnail">
-                              <a href="(*post_link*)">
-                                <img itemprop="image" src="(*post_image*)"
-                                  src=(*post_image*)" alt="(*post_title*)"
-                                  onerror="this.src='(*post_image*)';this.style.background='#496341'"
-                                  style="background: rgb(73, 99, 65);">
-                              </a>
-                            </figure>
-                            <h4 class="news-list-item-rootitr" style="white-space: normal;">
-                              <a href="(*post_link*)" data-fa-num="true"> (*post_date format="%A %e %B %Y"*) </a>
-                            </h4>
-                            <h3 class="news-list-item-title" itemprop="headline">
-                              <a itemprop="url"
-                                href="(*post_link*)"
-                                data-fa-num="true">
-                                (*post_title*)
+                  </div>
+                  <div id="video">
+                    <view:post_list>
+                      <div class="col col-6">
+                        <article itemscope="" itemtype="http://schema.org/CreativeWork" id="sidebar-video">
+                          <!-- <div class="video-player"> -->
+                          (*post_full_content*)
+                          <!-- </div> -->
+                          <div class="video-details">
+                            <h3 class="title">
+                              <a itemprop="url" href="(*post_link*)" data-fa-num="true">(*post_title*)
                               </a>
                             </h3>
-                          </article>
-                        </view:post_list>
-                      </section>
+                          </div>
+                        </article>
+                      </div>
+                    </view:post_list>
                   </div>
                 </box:post_list>
-              </div>
-              <box:post_list max="2" category="فیلم">
-                <div class="global-box" id="main-middle-box">
-                  <header class="global-header">
-                    <h3 class="global-header-title">
-                      <a href="/category/فیلم">
-                        فیلم
-                      </a>
-                    </h3>
-                    <div class="global-header-archive">
-                      <a href="/category/فیلم">
-                        آرشیو فیلم
-                      </a>
-                    </div>
-                  </header>
-                </div>
-                <div id="video">
-                  <view:post_list>
-                    <div class="col col-6">
-                      <article itemscope="" itemtype="http://schema.org/CreativeWork" id="sidebar-video">
-                        <!-- <div class="video-player"> -->
-                        (*post_full_content*)
-                        <!-- </div> -->
-                        <div class="video-details">
-                          <h3 class="title">
-                            <a itemprop="url" href="(*post_link*)" data-fa-num="true">(*post_title*)
-                            </a>
+              </check:if>
+
+                <check:if not index_selected>
+                  <div class="global-box" id="main-middle-box">
+                    <box:post_list max="10">
+                      <div class="news-list" data-type="type-b">
+                        <header class="global-header">
+                          <h3 class="global-header-title">
+                            <check:if post_list_title>
+                              (*post_list_title*)
+                            </check:if>
                           </h3>
-                        </div>
-                      </article>
-                    </div>
-                  </view:post_list>
-                </div>
-              </box:post_list>
+                        </header>
+                        <section class="news-list-items">
+                          <view:post_list>
+                            <check:if post_image>
+                              <article itemscope="" itemtype="http://schema.org/CreativeWork" class="news-list-item">
+                                <figure class="news-list-item-thumbnail">
+                                  <a href="(*post_link*)">
+                                    <img itemprop="image" src="(*post_image*)" src=(*post_image*)" alt="(*post_title*)"
+                                      onerror="this.src='(*post_image*)';this.style.background='#496341'"
+                                      style="background: rgb(73, 99, 65);">
+                                  </a>
+                                </figure>
+                                <h4 class="news-list-item-rootitr" style="white-space: normal;">
+                                  <a href="(*post_link*)" data-fa-num="true"> (*post_date format="%A %e %B %Y"*) </a>
+                                </h4>
+                                <h3 class="news-list-item-title" itemprop="headline">
+                                  <a itemprop="url" href="(*post_link*)" data-fa-num="true">
+                                    (*post_title*)
+                                  </a>
+                                </h3>
+                              </article>
+                            </check:if>
+                                <script>
+                                  if (window.location.pathname.includes("category"))
+                                  document.write(`<div id="video">
+                                        <div class="col col-6">
+                                          <article itemscope="" itemtype="http://schema.org/CreativeWork"
+                                            id="sidebar-video">
+                                            <!-- <div class="video-player"> -->
+                                            (*post_full_content*)
+                                            <!-- </div> -->
+                                            <div class="video-details">
+                                              <h3 class="title">
+                                                <a itemprop="url" href="(*post_link*)" data-fa-num="true">(*post_title*)
+                                                </a>
+                                              </h3>
+                                            </div>
+                                          </article>
+                                        </div>
+                                    </div>`);
+                                </script>
+                          </view:post_list>
+                        </section>
+                    </box:post_list>
+                  </div>
+                </check:if>
+              
+
             </main>
           </div>
           <div class="col col-4">

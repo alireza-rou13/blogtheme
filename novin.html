@@ -1,0 +1,845 @@
+<!DOCTYPE html><html lang="fa"><head>
+    <head:meta></head:meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <head:script></head:script>
+    <link href="https://cdn.bayan.ir/blog/templates/shared/css/main.css" rel="stylesheet">
+    <head:style></head:style>
+    </head><body>
+    
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top p-0 px-3">
+        <div class="container menu-items">
+            
+            <!-- Blog Title -->
+            <div class="col-5 col-lg-2">
+                <a class="navbar-brand" href="(*blog_link*)"><h1 class="h4 fw-bold">(*blog_title*)</h1></a>
+                <h2 class="h6 text-muted">(*blog_short_description*)</h2>
+            </div>
+            
+            <div>
+                <div class="ms-3 d-inline-block d-lg-none">
+                    <a class="cursor-pointer px-1 btn-ripple darkmode"><i class="fas fa-moon"></i></a>
+                    <a class="cursor-pointer px-1 btn-ripple lightmode"><i class="fas fa-sun"></i></a>
+                    <a class="cursor-pointer m-0 btn-ripple" id="search2"><i class="far fa-search"></i></a>
+                </div>
+                    (*navbar-toggler*)
+            </div>
+            <box:menu>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-4 mt-lg-0 mb-2 mb-lg-0 dir-rtl m-auto p-0">
+                        <view:menu>
+                            <li class="nav-item"><a class="nav-link (*menu_item_selected*)" href="(*menu_item_link*)">(*menu_item_title*)</a></li>
+                        </view:menu>
+                    </ul>
+                </div>
+            </box:menu>
+            <div class="left-head col-sm-2 d-lg-block dir-ltr cursor-default">
+                <div class="d-inline-block"><a class="btn btn-primary btn-sm" href="https://blog.ir/panel/-/followed_blogs?follow=(*blog_link*)">دنبال کنید</a></div>
+                <div class="d-none d-xl-inline-block d-lg-none">
+                    <a class="cursor-pointer ms-2 btn-ripple" id="search"><i class="far fa-search"></i></a>
+                    <a class="cursor-pointer m-0 btn-ripple darkmode"><i class="fas fa-moon"></i></a>
+                    <a class="cursor-pointer m-0 btn-ripple lightmode"><i class="fas fa-sun"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="nav-saerch-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-centered saerch-wrp">
+                            (*modern_search_form*)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <!-- Article/Page Cover-->
+    <check:if not index_selected>
+        <box:post_detail>
+            <div class="container-fluid post-image-wrp d-lg-block d-none">
+                <div class="row">
+                    <div class="position-relative mb-5 post-image">
+                        <div class="bg-image"><img class="w-100" src="(*post_image*)"></div>
+                        <div class="post-image  col-lg-4 col-12 mx-auto">
+                            <span><img class="w-100" src="(*post_image*)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </box:post_detail>
+    </check:if>
+    <!-- END Article/Page Cover-->
+    
+    
+    <!-- HomePage Content-->
+    <div class="container main-content">	
+        <div class="row">
+            
+            <box:messages>
+                <div class="row mb-5">
+                    <view:messages>
+                        <div style="padding-top: 15px;">
+                            <div class="item_(*message_type*)">
+                                <div class="icon"></div>
+                                (*message*)
+                            </div>
+                        </div><!-- /align -->
+                    </view:messages>
+                </div>
+            </box:messages>	
+            
+            
+            
+            
+            
+            
+            
+            
+            <!-- Blog entries-->
+            <check:if not index_selected>
+                <box:post_detail>
+                    <div class="col-lg-9 order-lg-2">
+                        
+                        <!--View Content-->
+                        <div class="card mb-4 rounded-5 border-0">
+                            <div class="card-body row p-0">
+                                
+                                <div class="col-lg-8">
+                                    <div class="card-body pt-0">
+                                        <a href="(*post_link*)" class="d-lg-none d-block col-lg-4 mb-4 mb-lg-0"><img class="w-100 rounded-5" alt="(*post_title*)" src="(*post_image*)"></a>
+                                        <a href="(*post_link*)"><h2 class="card-title d-inline-block h3">(*post_title*)</h2></a>
+                                        <div class="post-date">
+                                            <check:if post_date><div class="small text-muted d-inline-block">(*post_date*)</div></check:if>
+                                            <check:if post_author>
+                                                <i class="divider text-muted fas fa-square"></i>
+                                                <div class="small text-muted d-inline-block">(*post_author*)</div>
+                                            </check:if>
+                                        </div>
+                                        <div class="post-content card-text text-justify mt-3">
+                                            (*post_full_content*)
+                                        </div>
+                                    </div>
+                                    
+                                    <box:post_tags>
+                                        <div class="tag-box mb-2 mt-3">
+                                            <ul class="list-inline m-0 dir-ltr">
+                                                <view:post_tags>
+                                                    <li class="list-inline-item m-0 mr-1 mb-1"><a href="(*tag_link*)" target="_blank">(*tag_name*)</a></li>
+                                                </view:post_tags>
+                                            </ul>
+                                        </div>
+                                    </box:post_tags>
+                                    
+                                    
+                                    <box:post_rating>
+                                        <div class="col-12 mb-3 mt-3 post-details">
+                                            <!-- CAUTION: Don't edit these lines unless you know what you are doing 
+    DON'T edit rate-* classes: (rate-box rate-counter rate-button-box,
+    rate-button, rete-up, rate-down, rated) -->
+                                            
+                                            <span class="rate-box (*user_rated*)">
+                                                <span class="rate-button-box rate-up (*user_rated_up*)">
+                                                    <a class="text-decoration-none btn shadow-none rate-button" href="(*rate_up_link*)" rel="nofollow" title="موافق">
+                                                        <i class="far fa-grin-hearts align-middle post-details"></i>
+                                                        <span class="txt-rate btn-sm px-0 fw-bold">(*up_rates*)</span>
+                                                    </a>
+                                                </span>
+                                                <span class="rate-button-box rate-down (*user_rated_down*)">
+                                                    <a class="text-decoration-none btn shadow-none rate-button" href="(*rate_down_link*)" rel="nofollow" title="مخالف">
+                                                        <i class="far fa-frown-open align-middle post-details"></i>
+                                                        <span class="txt-rate btn-sm px-0 fw-bold">(*down_rates*)</span>
+                                                    </a>
+                                                </span>
+                                            </span>
+                                            
+                                            <check:if post_has_comments_section>
+                                                <a class="text-decoration-none btn shadow-none float-start" href="(*post_link*)#comments">
+                                                    <i class="far fa-comment-alt-lines align-middle post-details text-secondary"></i>
+                                                    <span class="btn-sm px-0 text-secondary">(*post_comment_count*) دیدگاه</span>
+                                                </a>
+                                            </check:if>
+                                        </div>
+                                    </box:post_rating>
+                                    
+                                    
+                                    <hr class="my-5">
+                                    
+                                    <!-- COMMENTS -->
+                                    <box:post_comments>
+                                        <div class="post-comments">
+                                            <check:if post_comment_count>
+                                                <h4 id="comments" class="text-muted d-inline-block">دیدگاه‌ها ((*post_comment_count*))</h4>
+                                            </check:if>
+                                            <check:if not post_comment_count>
+                                                <h4 id="comments" class="text-muted d-inline-block">دیدگاه‌ها</h4>
+                                            </check:if>
+                                            <div class="d-inline-block float-start">
+                                                <a href="#send_comment" class="btn btn-outline-primary btn-sm text-decoration-none">ارسال نظر</a>
+                                            </div>
+                                            <check:if not post_comment_count>
+                                                <h6 class="small text-muted">هیچ نظری هنوز ثبت نشده است.</h6>
+                                            </check:if>
+                                            <div class="comment-items my-5">
+                                                
+                                                <view:post_comments>
+                                                    <div class="comment-item position-relative <check:if comment_reply>hasreply</check:if>">
+                                                        <a name="comment-(*comment_id*)"></a>
+                                                        <check:if comment_reply><span class="avatar-line"></span></check:if>
+                                                        <div class="comment-header post-cmt-head row">
+                                                            <div class="col-1 mx-3 mr-0">
+                                                                <div class="comment-avatar d-inline-block align-middle"><img src="(*comment_avatar*)"></div>
+                                                            </div>
+                                                            <div class="col-10">
+                                                                <div class="comment-name d-inline-block align-middle">
+                                                                    <h4 class="small fw-bold mb-1 pt-2">(*comment_fullname*)</h4>
+                                                                    <h5 class="small text-muted m-0 fw-300"><a class="text-decoration-none text-muted" href="(*comment_link*)">(*comment_date format="%d %B %y ، %H:%M"*)</a></h5>
+                                                                </div>
+                                                                <div class="comment-links d-inline-block float-start cursor-default">
+                                                                    <check:if comment_email><a class="far fa-envelope text-decoration-none mx-2 align-middle" href="mailto:(*comment_email*)" target="_blank" rel="nofollow" title="(*comment_email*)"></a></check:if>
+                                                                    <check:if comment_website><a class="far fa-external-link text-decoration-none" href="(*comment_website*)" target="_blank" rel="nofollow" title="(*comment_website*)"></a></check:if>
+                                                                </div>
+                                                                <div class="comment-body mt-2 fw-300">
+                                                                    (*comment_body*)
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <check:if comment_reply>
+                                                            <div class="comment-reply">
+                                                                <div class="comment-header row">
+                                                                    <div class="col-1 mx-3 mr-0">
+                                                                        <div class="comment-avatar d-inline-block align-middle"><img src="(*comment_avatar*)"></div>
+                                                                    </div>
+                                                                    <div class="col-10">
+                                                                        <div class="comment-name d-inline-block align-middle">
+                                                                            <h4 class="small fw-bold mb-1 pt-2">پاسخ:</h4>
+                                                                            <h5 class="small text-muted m-0 fw-300">(*comment_reply_date*)</h5>
+                                                                        </div>
+                                                                        <div class="comment-links d-inline-block float-start cursor-default">
+                                                                            <check:if comment_email><a class="far fa-envelope text-decoration-none mx-2 align-middle" href="mailto:(*comment_email*)" target="_blank" rel="nofollow" title="(*comment_email*)"></a></check:if>
+                                                                            <check:if comment_website><a class="far fa-external-link text-decoration-none" href="(*comment_website*)" target="_blank" rel="nofollow" title="(*comment_website*)"></a></check:if>
+                                                                        </div>
+                                                                        <div class="comment-body mt-2 fw-300">
+                                                                            (*comment_reply*)
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </check:if>
+                                                        <hr class="my-4">
+                                                    </div>
+                                                </view:post_comments>
+                                                <!-- end Comment -->
+                                                
+                                            </div>
+                                        </div>
+                                    </box:post_comments>
+                                    <!-- END COMMENTS -->
+                                    
+                                    <check:if post_has_send_comment>
+                                        <a name="send_comment"></a>
+                                        <div class="comment-add-form">
+                                            (*comment_add_form*)
+                                        </div>
+                                    </check:if>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </box:post_detail>
+            </check:if>
+            <!-- END Blog entries-->
+            
+            
+            
+            <!-- Page entries-->
+            <check:if not index_selected>
+                <box:page_detail>
+                    <div class="col-lg-9 order-lg-2">
+                        
+                        <!--View Content-->
+                        <div class="card mb-4 rounded-5 border-0">
+                            <div class="card-body row p-0">
+                                
+                                <div class="col-lg-8">
+                                    <div class="card-body pt-0">
+                                        <a href="(*page_link*)" class="d-lg-none d-block col-lg-4 mb-4 mb-lg-0"><img class="w-100 rounded-5" alt="(*page_title*)"></a>
+                                        <a href="(*page_link*)"><h2 class="card-title d-inline-block h3">(*page_title*)</h2></a>
+                                        <div class="post-date">
+                                        </div>
+                                        <div class="post-content card-text text-justify mt-3">
+                                            (*page_content*)
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <hr class="my-5">
+                                    
+                                    <!-- COMMENTS -->
+                                    <box:page_comments>
+                                        <div class="post-comments">
+                                            <check:if page_comment_count>
+                                                <h4 id="comments" class="text-muted d-inline-block">دیدگاه‌ها ((*page_comment_count*))</h4>
+                                            </check:if>
+                                            <check:if not page_comment_count>
+                                                <h4 id="comments" class="text-muted d-inline-block">دیدگاه‌ها</h4>
+                                            </check:if>
+                                            <div class="d-inline-block float-start">
+                                                <a href="#send_comment" class="btn btn-outline-primary btn-sm text-decoration-none">ارسال نظر</a>
+                                            </div>
+                                            <check:if not page_comment_count>
+                                                <h6 class="small text-muted">هیچ نظری هنوز ثبت نشده است.</h6>
+                                            </check:if>
+                                            <div class="comment-items my-5">
+                                                
+                                                <view:page_comments>
+                                                    <div class="comment-item position-relative <check:if comment_reply>hasreply</check:if>">
+                                                        <a name="comment-(*comment_id*)"></a>
+                                                        <check:if comment_reply><span class="avatar-line"></span></check:if>
+                                                        <div class="comment-header post-cmt-head row">
+                                                            <div class="col-1 mx-3 mr-0">
+                                                                <div class="comment-avatar d-inline-block align-middle"><img src="(*comment_avatar*)"></div>
+                                                            </div>
+                                                            <div class="col-10">
+                                                                <div class="comment-name d-inline-block align-middle">
+                                                                    <h4 class="small fw-bold mb-1 pt-2">(*comment_fullname*)</h4>
+                                                                    <h5 class="small text-muted m-0 fw-300"><a class="text-decoration-none text-muted" href="(*comment_link*)">(*comment_date format="%d %B %y ، %H:%M"*)</a></h5>
+                                                                </div>
+                                                                <div class="comment-links d-inline-block float-start cursor-default">
+                                                                    <check:if comment_email><a class="far fa-envelope text-decoration-none mx-2 align-middle" href="mailto:(*comment_email*)" target="_blank" rel="nofollow" title="(*comment_email*)"></a></check:if>
+                                                                    <check:if comment_website><a class="far fa-external-link text-decoration-none" href="(*comment_website*)" target="_blank" rel="nofollow" title="(*comment_website*)"></a></check:if>
+                                                                </div>
+                                                                <div class="comment-body mt-2 fw-300">
+                                                                    (*comment_body*)
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <check:if comment_reply>
+                                                            <div class="comment-reply">
+                                                                <div class="comment-header row">
+                                                                    <div class="col-1 mx-3 mr-0">
+                                                                        <div class="comment-avatar d-inline-block align-middle"><img src="(*comment_avatar*)"></div>
+                                                                    </div>
+                                                                    <div class="col-10">
+                                                                        <div class="comment-name d-inline-block align-middle">
+                                                                            <h4 class="small fw-bold mb-1 pt-2">پاسخ:</h4>
+                                                                            <h5 class="small text-muted m-0 fw-300">(*comment_reply_date*)</h5>
+                                                                        </div>
+                                                                        <div class="comment-links d-inline-block float-start cursor-default">
+                                                                            <check:if comment_email><a class="far fa-envelope text-decoration-none mx-2 align-middle" href="mailto:(*comment_email*)" target="_blank" rel="nofollow" title="(*comment_email*)"></a></check:if>
+                                                                            <check:if comment_website><a class="far fa-external-link text-decoration-none" href="(*comment_website*)" target="_blank" rel="nofollow" title="(*comment_website*)"></a></check:if>
+                                                                        </div>
+                                                                        <div class="comment-body mt-2 fw-300">
+                                                                            (*comment_reply*)
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </check:if>
+                                                        <hr class="my-4">
+                                                    </div>
+                                                </view:page_comments>
+                                                <!-- end Comment -->
+                                                
+                                            </div>
+                                        </div>
+                                    </box:page_comments>
+                                    <!-- END COMMENTS -->
+                                    
+                                    <check:if page_has_send_comment>
+                                        <a name="send_comment"></a>
+                                        <div class="comment-add-form">
+                                            (*comment_add_form*)
+                                        </div>
+                                    </check:if>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </box:page_detail>
+            </check:if>
+            <!-- END Page entries-->
+            
+            
+            
+            
+            <!-- Blog entries-->
+            <div class="col-lg-9 order-lg-2">
+                
+                <!-- Featured post-->
+                <check:if index_selected>
+                    <box:post_list flag="featured-post" max="1">
+                        <div class="card mb-4 post-featured rounded-5 border-0">
+                            <view:post_list>
+                                <div class="card-body row p-0">
+                                    <check:if post_image><a href="(*post_link*)" class="col-lg-4 mb-4 mb-lg-0"><img class="w-100 rounded-5" alt="(*post_title*)" src="(*post_image*)"></a></check:if>
+                                    <div class="col-lg-8">
+                                        <div class="card-body pt-0">
+                                            <a href="(*post_link*)"><h2 class="card-title d-inline-block h3">(*post_title*)</h2></a>
+                                            <div class="post-date">
+                                                <check:if post_date><div class="small text-muted d-inline-block">(*post_date format="%d %B %Y ، %H:%M"*)</div></check:if>
+                                                <check:if post_author><i class="divider text-muted fas fa-square"></i>
+                                                    <div class="small text-muted d-inline-block">(*post_author*)</div></check:if>
+                                            </div>
+                                            <div>(*post_summary*)</div>
+                                            <check:if post_has_read_more><a class="text-decoration-none btn btn-warning btn-sm" href="(*post_link*)">ادامه مطلب</a></check:if>
+                                        </div>
+                                        
+                                        <box:post_rating>
+                                            <div class="col-12 mb-3 post-details">
+                                                <!-- CAUTION: Don't edit these lines unless you know what you are doing 
+    DON'T edit rate-* classes: (rate-box rate-counter rate-button-box,
+    rate-button, rete-up, rate-down, rated) -->
+                                                
+                                                <span class="rate-box (*user_rated*)">
+                                                    <span class="rate-button-box rate-up (*user_rated_up*)">
+                                                        <a class="text-decoration-none btn shadow-none rate-button" href="(*rate_up_link*)" rel="nofollow" title="موافق">
+                                                            <i class="far fa-grin-hearts align-middle post-details"></i>
+                                                            <span class="txt-rate btn-sm px-0 fw-bold">(*up_rates*)</span>
+                                                        </a>
+                                                    </span>
+                                                    <span class="rate-button-box rate-down (*user_rated_down*)">
+                                                        <a class="text-decoration-none btn shadow-none rate-button" href="(*rate_down_link*)" rel="nofollow" title="مخالف">
+                                                            <i class="far fa-frown-open align-middle post-details"></i>
+                                                            <span class="txt-rate btn-sm px-0 fw-bold">(*down_rates*)</span>
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                                
+                                                <check:if post_has_comments_section>
+                                                    <a class="text-decoration-none btn shadow-none float-start" href="(*post_link*)#comments">
+                                                        <i class="far fa-comment-alt-lines align-middle post-details text-secondary"></i>
+                                                        <span class="btn-sm px-0 text-secondary">(*post_comment_count*) دیدگاه</span>
+                                                    </a>
+                                                </check:if>
+                                            </div>
+                                        </box:post_rating>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </view:post_list>
+                        </div>
+                        
+                        <div class="mb-5 mr-0 mt-r4"><h4 class="text-muted strike"><span>آخرین مطالب</span></h4></div>
+                    </box:post_list>
+                </check:if>
+                
+                <!-- Start PostList -->
+                <box:post_list>
+                    <div class="row post-list">
+                        
+                        <check:if post_list_title>
+                            <div class="align">
+                                <div class="messages">
+                                    <div class="messages-content">
+                                        <h2>(*post_list_title*)</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </check:if>
+                        
+                        <!-- Start Blog Post -->
+                        <view:post_list>
+                            <div class="col-lg-4">
+                                <div class="card rounded-5 mb-4 border-0">
+                                    <check:if post_image><a href="(*post_link*)"><img class="card-img-top rounded-5" src="(*post_image*)" alt="(*post_title*)"></a></check:if>
+                                    <div class="card-body">
+                                        <div class="post-date">
+                                            <check:if post_date><div class="small text-muted d-inline-block">(*post_date format="%d %B %Y ، %H:%M"*)</div></check:if>
+                                            <check:if post_author><i class="divider text-muted fas fa-square"></i>
+                                                <div class="small text-muted d-inline-block">(*post_author*)</div></check:if>
+                                        </div>
+                                        <a href="(*post_link*)" class="text-decoration-none"><h2 class="card-title h5">(*post_title*)</h2></a>
+                                        <div>(*post_summary*)</div>
+                                        <check:if post_has_read_more><a class="text-decoration-none btn btn-outline-primary btn-sm" href="(*post_link*)">ادامه مطلب</a></check:if>
+                                    </div>
+                                    
+                                    <box:post_rating>
+                                        <div class="col-12 mb-3 post-details">
+                                            <!-- CAUTION: Don't edit these lines unless you know what you are doing 
+    DON'T edit rate-* classes: (rate-box rate-counter rate-button-box,
+    rate-button, rete-up, rate-down, rated) -->
+                                            
+                                            <span class="rate-box (*user_rated*)">
+                                                <span class="rate-button-box rate-up (*user_rated_up*)">
+                                                    <a class="text-decoration-none btn shadow-none rate-button" href="(*rate_up_link*)" rel="nofollow" title="موافق">
+                                                        <i class="far fa-grin-hearts align-middle post-details"></i>
+                                                        <span class="txt-rate btn-sm px-0 fw-bold">(*up_rates*)</span>
+                                                    </a>
+                                                </span>
+                                                <span class="rate-button-box rate-down (*user_rated_down*)">
+                                                    <a class="text-decoration-none btn shadow-none rate-button" href="(*rate_down_link*)" rel="nofollow" title="مخالف">
+                                                        <i class="far fa-frown-open align-middle post-details"></i>
+                                                        <span class="txt-rate btn-sm px-0 fw-bold">(*down_rates*)</span>
+                                                    </a>
+                                                </span>
+                                            </span>
+                                            
+                                            <check:if post_has_comments_section>
+                                                <a class="text-decoration-none btn shadow-none float-start" href="(*post_link*)#comments">
+                                                    <i class="far fa-comment-alt-lines align-middle post-details text-secondary"></i>
+                                                    <span class="btn-sm px-0 text-secondary">(*post_comment_count*) دیدگاه</span>
+                                                </a>
+                                            </check:if>
+                                        </div>
+                                    </box:post_rating>
+                                    
+                                </div>
+                                <hr class="mb-5 d-lg-none">
+                            </div>
+                        </view:post_list>
+                        <!-- End Blog Post -->
+                        
+                        <!-- End PostList -->
+                    </div>
+                </box:post_list>
+                
+                <!-- Pagination-->
+                <box:pagination>
+                    <nav>
+                        <!-- <hr class="my-0" /> -->
+                        <ul class="pagination justify-content-center mb-5 mt-4 p-0">
+                            <check:if page_prev><li class="page-item"><a class="page-link" href="(*page_prev*)">قبلی</a></li></check:if>
+                            <view:pages spec="5,2,4,2,3,2">
+                                <check:if page_num>
+                                </check:if>
+                                <li class="page-item (*page_current*)"><a class="page-link" href="(*page_link*)">(*page_num*)</a></li>
+                                <check:if not page_num>
+                                    <li class="page-item disabled"><a class="page-link" href="#!">...</a></li>
+                                </check:if>
+                            </view:pages>
+                            <check:if page_next><li class="page-item"><a class="page-link" href="(*page_next*)">بعدی</a></li></check:if>
+                        </ul>
+                    </nav>
+                </box:pagination>
+                
+                
+                
+                <!-- Optional -->
+                <hr class="my-5 d-lg-none d-none d-sm-block">
+                
+                
+            </div>
+            
+            <!-- Side widgets-->
+            <div class="col-lg-3 order-1 d-none d-sm-block">
+                
+                <!-- About widget -->
+                <box:blog_info>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom">
+                        <div class="row">
+                            <check:if blog_image>
+                                <div class="blog-image">
+                                    <img alt="(*blog_title*)" src="(*blog_image*)">
+                                </div>
+                            </check:if>
+                            <check:if blog_description>
+                                <div class="blog-description">
+                                    <p class="pt-2 pb-1 small">(*blog_description*)</p>
+                                </div>
+                            </check:if>
+                        </div>
+                    </div>
+                </box:blog_info>
+                
+                <!-- Social widget -->
+                <div class="card rounded-0 mb-4 border-0 border-bottom social-box">
+                    <div class="row pb-3">
+                        <div class="col-6">
+                            <h6 class="m-0">شبکه‌های اجتماعی</h6>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-inline m-0 dir-ltr">
+                                <li class="list-inline-item m-0 mr-1"><a href="#" title="Linkedin" target="_blank"><i class="fab fa-linkedin tc-l-2"></i></a></li>
+                                <li class="list-inline-item m-0 mr-1"><a href="#" title="Instagram" target="_blank"><i class="fab fa-instagram tc-l-2"></i></a></li>
+                                <li class="list-inline-item m-0 mr-1"><a href="#" title="Twitter" target="_blank"><i class="fab fa-twitter tc-l-2"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ads widget-->
+                <box:ads>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom">
+                        <h6 class="m-0 text-muted">تبلیغات</h6>
+                        <div class="card-body p-0 pt-3 pb-4 mx-auto">
+                            <view:ads>
+                                <div class="mb-2">(*ad*)</div>
+                            </view:ads>
+                        </div>
+                    </div>
+                </box:ads>
+                
+                <!-- Categories widget-->
+                <box:categories>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom category-box">
+                        <h6 class="m-0 text-muted">دسته‌بندی</h6>
+                        <div class="card-body p-0 pt-3 pb-4">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    
+                                    <ul>
+                                        <view:categories>
+                                            <li class="(*category_selected*)">
+                                                <check:if category_selected>
+                                                    <a class="category_selected" href="#"><h3>(*category_name*) </h3></a><span class="post-list-count text-muted"> ((*category_post_count*))</span>
+                                                </check:if>
+                                                <check:if not category_selected>
+                                                    <a href="(*category_link*)"><h3>(*category_name*) </h3></a><span class="post-list-count text-muted"> ((*category_post_count*))</span>
+                                                </check:if>
+                                                <check:if category_children>
+                                                    <ul class="subcats">
+                                                        <view:category_children></view:category_children>
+                                                    </ul>
+                                                </check:if>
+                                            </li>
+                                        </view:categories>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:categories>
+                
+                <!-- Tag widget-->
+                <box:tag_cloud>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom tag-box">
+                        <h6 class="m-0 text-muted">کلمات کلیدی</h6>
+                        <div class="card-body p-0 pt-3 pb-4">
+                            <ul class="list-inline m-0 dir-ltr">
+                                <view:tag_cloud>
+                                    <li class="list-inline-item m-0 mr-1 mb-1 (*tag_selected*)"><a href="(*tag_link*)">(*tag_name*)</a></li>
+                                </view:tag_cloud>
+                            </ul>
+                        </div>
+                    </div>
+                </box:tag_cloud>
+                
+                <!-- Stat widget-->
+                <box:stat>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom post-item-box">
+                        <h6 class="m-0 text-muted">خلاصه آمار</h6>
+                        <div class="card-body p-0 py-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="list-unstyled p-0 m-0">
+                                        <view:stat>
+                                            <li class="small">(*stat_title*)<span class="text-muted small float-start">(*stat_value*)</span></li>
+                                        </view:stat>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:stat>
+                
+                <!-- Article widget-->
+                <box:recent_posts>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom post-item-box">
+                        <h6 class="m-0 text-muted">آخرین مطلب</h6>
+                        <div class="card-body p-0 py-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="list-unstyled p-0 m-0">
+                                        <view:recent_posts>
+                                            <li class="(*post_selected*)"><a href="(*post_link*)">(*post_title*)<span class="text-muted small"></span></a></li>
+                                        </view:recent_posts>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:recent_posts>
+                
+                <!-- Article widget-->
+                <box:most_visited_posts>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom post-item-box">
+                        <h6 class="m-0 text-muted">پربیننده ترین مطالب</h6>
+                        <div class="card-body p-0 py-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="list-unstyled p-0 m-0">
+                                        <view:most_visited_posts>
+                                            <li class="(*post_selected*)"><a href="(*post_link*)">(*post_title*)<span class="text-muted small"></span></a></li>
+                                        </view:most_visited_posts>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:most_visited_posts>
+                
+                <!-- Article widget-->
+                <box:popular_posts>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom post-item-box">
+                        <h6 class="m-0 text-muted">محبوب ترین مطالب</h6>
+                        <div class="card-body p-0 py-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="list-unstyled p-0 m-0">
+                                        <view:popular_posts>
+                                            <li class="(*post_selected*)"><a href="(*post_link*)">(*post_title*)<span class="text-muted small"></span></a></li>
+                                        </view:popular_posts>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:popular_posts>
+                
+                <!-- Article widget-->
+                <box:most_commented_posts>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom post-item-box">
+                        <h6 class="m-0 text-muted">مطالب پربحث‌تر</h6>
+                        <div class="card-body p-0 py-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="list-unstyled p-0 m-0">
+                                        <view:most_commented_posts>
+                                            <li class="(*post_selected*)"><a href="(*post_link*)">(*post_title*)<span class="text-muted small"></span></a></li>
+                                        </view:most_commented_posts>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:most_commented_posts>
+                
+                <!-- Comments widget-->
+                <box:recent_comments>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom post-item-box">
+                        <h6 class="m-0 text-muted">آخرین نظرات</h6>
+                        <div class="card-body p-0 py-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="list-unstyled p-0 m-0">
+                                        <view:recent_comments>
+                                            <li><a href="(*comment_link*)">(*comment_body_text max="40"*)<span class="text-muted small"></span></a></li>
+                                        </view:recent_comments>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:recent_comments>
+                
+                <!-- Authors widget-->
+                <box:authors>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom post-item-box">
+                        <h6 class="m-0 text-muted">نویسندگان</h6>
+                        <div class="card-body p-0 py-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="list-unstyled p-0 m-0">
+                                        <view:authors>
+                                            <li><a href="(*author_link*)">(*author_name*)<span class="text-muted small"> ((*author_post_count*))</span></a></li>
+                                        </view:authors>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:authors>
+                
+                <!-- Link-daily widget-->
+                <box:daily_links>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom post-item-box">
+                        <h6 class="m-0 text-muted">پیوندهای روزانه</h6>
+                        <div class="card-body p-0 py-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="list-unstyled p-0 m-0">
+                                        <view:daily_links>
+                                            <li><a href="(*link_url*)" alt="(*link_alt*)">(*link_name*)</a></li>
+                                        </view:daily_links>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:daily_links>
+                
+                <!-- Link widget-->
+                <box:links>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom post-item-box">
+                        <h6 class="m-0 text-muted">پیوندها</h6>
+                        <div class="card-body p-0 py-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="list-unstyled p-0 m-0">
+                                        <view:links>
+                                            <li><a href="(*link_url*)" alt="(*link_alt*)">(*link_name*)</a></li>
+                                        </view:links>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:links>
+                
+                <!-- Archive widget-->
+                <box:archive>
+                    <div class="card rounded-0 mb-4 border-0 border-bottom post-item-box">
+                        <h6 class="m-0 text-muted">بایگانی</h6>
+                        <div class="card-body p-0 py-3">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <ul class="list-unstyled p-0 m-0">
+                                        <view:archive>
+                                            <li class="(*archive_selected*)"><a href="(*link_url*)">(*link_name*)<span class="text-muted small"> ((*link_count*))</span></a></li>
+                                        </view:archive>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </box:archive>
+                
+                
+            </div><!-- END widgets-->
+            
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer class="py-4 border-top mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-9 px-4">
+                    
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="m-0">قدرت گرفته از <a href="https://blog.ir" target="_blank" class="text-decoration-none">بلاگ</a> <a href="https://bayan.ir" target="_blank" class="text-decoration-none">بیان</a></p>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-inline m-0 dir-ltr">
+                                <li class="list-inline-item m-0 mr-1"><a href="/rss/" title="RSS" target="_blank"><i class="rss"></i></a></li>
+                                <li class="list-inline-item m-0 mr-1"><a href="//bayan.ir/" title="bayan : بیان" target="_blank"><i class="bayan"></i></a></li>
+                                <li class="list-inline-item m-0 mr-1"><a href="//bayanbox.ir/" title="bayanbox : بیان باکس" target="_blank"><i class="bbox"></i></a></li>
+                                <li class="list-inline-item m-0 mr-1"><a href="//blog.ir/" title="blog : وبلاگ" target="_blank"><i class="blog"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Theme JS-->
+    <script src="https://cdn.bayan.ir/blog/templates/shared/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.bayan.ir/blog/templates/shared/js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.bayan.ir/blog/templates/shared/js/theme.main.min.js"></script>
+    
+    
+    </body></html>

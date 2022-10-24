@@ -198,13 +198,6 @@
                             <div class=details-right><time datetime class=date data-fa-num=true>(*post_date*)</time>
                                 <div class=view-count data-fa-num=true>(*post_visits*)</div>
                             </div>
-                            <!-- <div class=details-left><button type=button class=goto-comment-form><i
-                                        class="fas fa-comment-dots"></i></button><button type=button class=share-post
-                                    data-link=https://raisi.ir/5178
-                                    data-title="(*post_title*)"><i
-                                        class="fas fa-share-alt"></i></button><button type=button class=short-link
-                                    data-link=https://raisi.ir/5178><i class="fas fa-link"></i></button><input type=text
-                                    tabindex=-1 aria-hidden=true value=https://raisi.ir/5178></div> -->
                         </header>
                     </div>
                     <div class="global-box on-post-page" id=main-middle-box>
@@ -249,29 +242,26 @@
                         </div>
                       </header>
                       <section class="news-list-items">
-                          <view:post_list>
-                            <article itemscope="" itemtype="http://schema.org/CreativeWork" class="news-list-item">
-                              <figure class="news-list-item-thumbnail">
-                                <a href="(*post_link*)">
-                                  <img itemprop="image" src="(*post_image*)"
-                                    src=(*post_image*)" alt="(*post_title*)"
-                                    onerror="this.src='(*post_image*)';this.style.background='#496341'"
-                                    style="background: rgb(73, 99, 65);">
-                                </a>
-                              </figure>
-                              <h4 class="news-list-item-rootitr" style="white-space: normal;">
-                                <a href="(*post_link*)" data-fa-num="true"> (*post_date format="%A %e %B %Y"*) </a>
-                              </h4>
-                              <h3 class="news-list-item-title" itemprop="headline">
-                                <a itemprop="url"
-                                  href="(*post_link*)"
-                                  data-fa-num="true">
-                                  (*post_title*)
-                                </a>
-                              </h3>
-                            </article>
-                          </view:post_list>
-                        </section>
+                        <view:post_list>
+                          <article itemscope="" itemtype="http://schema.org/CreativeWork" class="news-list-item">
+                            <figure class="news-list-item-thumbnail">
+                              <a href="(*post_link*)">
+                                <img itemprop="image" src="(*post_image*)" src=(*post_image*)" alt="(*post_title*)"
+                                  onerror="this.src='(*post_image*)';this.style.background='#496341'"
+                                  style="background: rgb(73, 99, 65);">
+                              </a>
+                            </figure>
+                            <h4 class="news-list-item-rootitr" style="white-space: normal;">
+                              <a href="(*post_link*)" data-fa-num="true"> (*post_date format="%A %e %B %Y"*) </a>
+                            </h4>
+                            <h3 class="news-list-item-title" itemprop="headline">
+                              <a itemprop="url" href="(*post_link*)" data-fa-num="true">
+                                (*post_title*)
+                              </a>
+                            </h3>
+                          </article>
+                        </view:post_list>
+                      </section>
                     </div>
                   </box:post_list>
                 </div>
@@ -289,23 +279,24 @@
                         </a>
                       </div>
                     </header>
-                  </div>
-                  <div id="video">
-                    <view:post_list>
-                      <div class="col col-6">
-                        <article itemscope="" itemtype="http://schema.org/CreativeWork" id="sidebar-video">
-                          <!-- <div class="video-player"> -->
-                          (*post_full_content*)
-                          <!-- </div> -->
-                          <div class="video-details">
-                            <h3 class="title">
-                              <a itemprop="url" href="(*post_link*)" data-fa-num="true">(*post_title*)
-                              </a>
-                            </h3>
-                          </div>
-                        </article>
-                      </div>
-                    </view:post_list>
+
+                    <div id="video">
+                      <view:post_list>
+                        <div class="col col-6">
+                          <article itemscope="" itemtype="http://schema.org/CreativeWork" id="sidebar-video">
+                            <!-- <div class="video-player"> -->
+                            (*post_full_content*)
+                            <!-- </div> -->
+                            <div class="video-details">
+                              <h3 class="title">
+                                <a itemprop="url" href="(*post_link*)" data-fa-num="true">(*post_title*)
+                                </a>
+                              </h3>
+                            </div>
+                          </article>
+                        </div>
+                      </view:post_list>
+                    </div>
                   </div>
                 </box:post_list>
               </check:if>
@@ -323,13 +314,19 @@
                         </header>
                         <section class="news-list-items">
                           <view:post_list>
-                            <check:if post_image>
                               <article itemscope="" itemtype="http://schema.org/CreativeWork" class="news-list-item">
                                 <figure class="news-list-item-thumbnail">
                                   <a href="(*post_link*)">
-                                    <img itemprop="image" src="(*post_image*)" src=(*post_image*)" alt="(*post_title*)"
-                                      onerror="this.src='(*post_image*)';this.style.background='#496341'"
-                                      style="background: rgb(73, 99, 65);">
+                                    <check:if post_image>
+                                      <img itemprop="image" src="(*post_image*)" src=(*post_image*)"
+                                        alt="(*post_title*)"
+                                        style="background: rgb(73, 99, 65);">
+                                    </check:if>
+                                    <check:if not post_image>
+                                      <img itemprop="image"
+                                        src="https://cdn.statically.io/gh/alireza-rou13/blogtheme/471e714f/assets/noimage.jpg"                                        alt="(*post_title*)"
+                                        style="background: rgb(73, 99, 65);">
+                                    </check:if>
                                   </a>
                                 </figure>
                                 <h4 class="news-list-item-rootitr" style="white-space: normal;">
@@ -341,26 +338,7 @@
                                   </a>
                                 </h3>
                               </article>
-                            </check:if>
-                                <script>
-                                  if (window.location.pathname.includes("category"))
-                                  document.write(`<div id="video">
-                                        <div class="col col-6">
-                                          <article itemscope="" itemtype="http://schema.org/CreativeWork"
-                                            id="sidebar-video">
-                                            <!-- <div class="video-player"> -->
-                                            (*post_full_content*)
-                                            <!-- </div> -->
-                                            <div class="video-details">
-                                              <h3 class="title">
-                                                <a itemprop="url" href="(*post_link*)" data-fa-num="true">(*post_title*)
-                                                </a>
-                                              </h3>
-                                            </div>
-                                          </article>
-                                        </div>
-                                    </div>`);
-                                </script>
+                            
                           </view:post_list>
                         </section>
                     </box:post_list>
@@ -512,7 +490,7 @@
             <figcaption>(*blog_title*)</figcaption>
           </figure>
         </div>
-        <div class="col col-8">
+        <div class="col col-7">
           <box:menu>
             <nav class="main-menu">
               <ul>
@@ -528,6 +506,9 @@
               </ul>
             </nav>
           </box:menu>
+        </div>
+        <div class="col col-1" style="position: absolute;bottom: 0;left: 0;padding: 0;text-align: left;">
+          <p>design by <a href="https://alirezarouhani.ir">rouhani</a></p>
         </div>
       </div>
     </div>

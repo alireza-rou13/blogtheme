@@ -530,8 +530,6 @@ $('.carousel-container').each(function(){
 			$('<div>').addClass('swiper-scrollbar').appendTo($('#'+_this_id));
 		}
 	}
-	var _swiper = new Swiper('#'+_this_id,_swiper_option);	
-	_carousel_index++;
 });
 
 $('#header .main-menu .toggle-menu').on('click',function(){

@@ -11680,7 +11680,7 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 	filter: brightness(5)
 }
 
-#sidebar-video , #sidebar-audio {
+#sidebar-video {
 	display: block;
 	width: 100%;
 	height: 302px;
@@ -12727,6 +12727,14 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 }
 .peyvand img {
     max-width: 100%;
+}
+
+#sidebar-audio {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 12px;
+	background: #e6e6e6
 }
 #sidebar-audio .audio-details>* {
     height: 60px;

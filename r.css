@@ -11680,7 +11680,7 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 	filter: brightness(5)
 }
 
-#sidebar-video {
+#sidebar-video , #sidebar-audio {
 	display: block;
 	width: 100%;
 	height: 302px;
@@ -12729,13 +12729,11 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
     max-width: 100%;
 }
 #sidebar-audio .audio-details>* {
-    position: absolute;
     height: 60px;
     /* margin-top: -30px; */
     top: 50%;
 }
 #sidebar-audio .audio-details .title {
-    position: absolute;
     top: auto;
     padding-left: 8px;
     font-size: 16px;

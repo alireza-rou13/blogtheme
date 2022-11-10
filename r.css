@@ -12730,6 +12730,7 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 }
 
 #sidebar-audio {
+	margin-bottom: 20px;
 	display: block;
 	width: 100%;
 	overflow: hidden;
@@ -12738,7 +12739,6 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 }
 #sidebar-audio .audio-details>* {
     height: 60px;
-    /* margin-top: -30px; */
     top: 50%;
 }
 #sidebar-audio .audio-details .title {
@@ -12752,7 +12752,6 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    /* margin-top: 12px; */
     margin: 12px;
     text-align: center;
 }

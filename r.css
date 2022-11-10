@@ -12755,3 +12755,9 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
     margin: 12px;
     text-align: center;
 }
+#sidebar-audio .audio-details .title a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #4c4c4c;
+}

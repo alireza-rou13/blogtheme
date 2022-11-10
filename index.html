@@ -46,6 +46,8 @@
   <meta name="msapplication-TileColor" content="#1d7633" />
   <meta name="msapplication-TileImage" content="https://raisi.ir/ms-icon-144x144.png" />
   <meta name="theme-color" content="#1d7633" />
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+
   <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/alireza-rou13/blogtheme/r.css" /> -->
   <link rel="stylesheet" type="text/css" href="https://cdn.statically.io/gh/alireza-rou13/blogtheme/7cd9816b/r.css" />
   <!-- <link rel="stylesheet" type="text/css" href="https://cdn.bayan.ir/blog/templates/shared/css/icons-fa.css" /> -->
@@ -385,8 +387,8 @@
                 <div class="news-list" data-type="type-a">
                   <header class="global-header">
                     <h3 class="global-header-title">
-                      <a data-savepage-href="/2557" href="https://raisi.ir/2557">
-                        نقشه راه اقتصادی
+                      <a href="">
+                        پایداری و تحکیم خانواده 
                       </a>
                     </h3>
                   </header>
@@ -471,6 +473,27 @@
                     </section>
                   </box:post_list>
                 </div>
+                <div class="news-list" data-type="type-a">
+                  <header class="global-header">
+                    <h3 class="global-header-title">
+                      <a href="/category/یادداشت">
+                        صوت ها
+                      </a>
+                    </h3>
+                    <div class="global-header-archive">
+                      <a href="/category/صوت">
+                        آرشیو
+                      </a>
+                    </div>
+                  </header>
+                  <box:post_list max="6" category="صوت">
+                    <section class="news-list-items">
+                      <view:post_list>
+                        (*post_full_content*)
+                      </view:post_list>
+                    </section>
+                  </box:post_list>
+                </div>
               </div>
             </aside>
           </div>
@@ -513,8 +536,12 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.statically.io/gh/alireza-rou13/blogtheme/aba959be/js/jquery.js"></script>
+  <script>
+    const player = new Plyr(document.getElementById('player'));
+  </script>
   <script type="text/plain">
     (function () {var INSTALL_OPTIONS = []; !function(){
         /*! instant.page v5.1.0 - (C) 2019-2020 Alexandre Dieulot - https://instant.page/license */

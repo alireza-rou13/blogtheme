@@ -12761,3 +12761,6 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
     height: 100%;
     color: #4c4c4c;
 }
+.plyr__menu{
+	display: none;
+}

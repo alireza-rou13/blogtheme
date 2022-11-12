@@ -11499,9 +11499,9 @@ body.direction-ltr .lobibox-notify .lobibox-notify-body {
 	transform: translateX(-50%)
 }
 
-.sidebar {
+/* .sidebar {
 	padding-top: 34px
-}
+} */
 
 .sidebar.on-pages {
 	padding-top: 0;

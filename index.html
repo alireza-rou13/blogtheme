@@ -188,6 +188,115 @@
                     
                   </box:post_list>
                 </check:if>
+                <!-- Page entries-->
+                <check:if not index_selected>
+                  <box:page_detail>
+                    <!--View Content-->
+                    <div class="global-box on-post-page" id=main-middle-box>
+                      <article class=post-container>
+                        <!-- <h3 class=rootitr data-fa-num=true>دکتر رئیسی در جلسه ستاد ملی مقابله با کرونا:</h3> -->
+                        <h1 class=title data-fa-num=true>(*page_title*)</h1>
+                        <div class=content>
+                          <p>(*page_content*)</p>
+                        </div>
+                      </article>
+                    </div>
+                    <div class="card mb-4 rounded-5 border-0">
+                      <div class="card-body row p-0">
+                        <hr class="my-5">
+                
+                        <!-- COMMENTS -->
+                        <box:page_comments>
+                          <div class="post-comments">
+                            <check:if page_comment_count>
+                              <h4 id="comments" class="text-muted d-inline-block">دیدگاه‌ها ((*page_comment_count*))</h4>
+                            </check:if>
+                            <check:if not page_comment_count>
+                              <h4 id="comments" class="text-muted d-inline-block">دیدگاه‌ها</h4>
+                            </check:if>
+                            <div class="d-inline-block float-start">
+                              <a href="#send_comment" class="btn btn-outline-primary btn-sm text-decoration-none">ارسال نظر</a>
+                            </div>
+                            <check:if not page_comment_count>
+                              <h6 class="small text-muted">هیچ نظری هنوز ثبت نشده است.</h6>
+                            </check:if>
+                            <div class="comment-items my-5">
+                
+                              <view:page_comments>
+                                <div class="comment-item position-relative <check:if comment_reply>hasreply</check:if>">
+                                  <a name="comment-(*comment_id*)"></a>
+                                  <check:if comment_reply><span class="avatar-line"></span></check:if>
+                                  <div class="comment-header post-cmt-head row">
+                                    <div class="col-1 mx-3 mr-0">
+                                      <div class="comment-avatar d-inline-block align-middle"><img src="(*comment_avatar*)"></div>
+                                    </div>
+                                    <div class="col-10">
+                                      <div class="comment-name d-inline-block align-middle">
+                                        <h4 class="small fw-bold mb-1 pt-2">(*comment_fullname*)</h4>
+                                        <h5 class="small text-muted m-0 fw-300"><a class="text-decoration-none text-muted"
+                                            href="(*comment_link*)">(*comment_date format="%d %B %y ، %H:%M"*)</a></h5>
+                                      </div>
+                                      <div class="comment-links d-inline-block float-start cursor-default">
+                                        <check:if comment_email><a class="far fa-envelope text-decoration-none mx-2 align-middle"
+                                            href="mailto:(*comment_email*)" target="_blank" rel="nofollow"
+                                            title="(*comment_email*)"></a></check:if>
+                                        <check:if comment_website><a class="far fa-external-link text-decoration-none"
+                                            href="(*comment_website*)" target="_blank" rel="nofollow" title="(*comment_website*)"></a>
+                                        </check:if>
+                                      </div>
+                                      <div class="comment-body mt-2 fw-300">
+                                        (*comment_body*)
+                                      </div>
+                                    </div>
+                                  </div>
+                
+                                  <check:if comment_reply>
+                                    <div class="comment-reply">
+                                      <div class="comment-header row">
+                                        <div class="col-1 mx-3 mr-0">
+                                          <div class="comment-avatar d-inline-block align-middle"><img src="(*comment_avatar*)"></div>
+                                        </div>
+                                        <div class="col-10">
+                                          <div class="comment-name d-inline-block align-middle">
+                                            <h4 class="small fw-bold mb-1 pt-2">پاسخ:</h4>
+                                            <h5 class="small text-muted m-0 fw-300">(*comment_reply_date*)</h5>
+                                          </div>
+                                          <div class="comment-links d-inline-block float-start cursor-default">
+                                            <check:if comment_email><a class="far fa-envelope text-decoration-none mx-2 align-middle"
+                                                href="mailto:(*comment_email*)" target="_blank" rel="nofollow"
+                                                title="(*comment_email*)"></a></check:if>
+                                            <check:if comment_website><a class="far fa-external-link text-decoration-none"
+                                                href="(*comment_website*)" target="_blank" rel="nofollow"
+                                                title="(*comment_website*)"></a></check:if>
+                                          </div>
+                                          <div class="comment-body mt-2 fw-300">
+                                            (*comment_reply*)
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </check:if>
+                                  <hr class="my-4">
+                                </div>
+                              </view:page_comments>
+                              <!-- end Comment -->
+                
+                            </div>
+                          </div>
+                        </box:page_comments>
+                        <!-- END COMMENTS -->
+                
+                        <check:if page_has_send_comment>
+                          <a name="send_comment"></a>
+                          <div class="comment-add-form">
+                            (*comment_add_form*)
+                          </div>
+                        </check:if>
+                      </div>
+                    </div>
+                  </box:page_detail>
+                </check:if>
+                <!-- END Page entries-->
                 <check:if not index_selected>
                   <box:post_detail>
                     <div class="global-box fit-mode">
@@ -284,7 +393,7 @@
 
                     <div id="video">
                       <view:post_list>
-                        <div class="col col-6">
+                        <div id="video-item" class="col col-6" style="padding: 0;">
                           <article itemscope="" itemtype="http://schema.org/CreativeWork" id="sidebar-video">
                             <!-- <div class="video-player"> -->
                             (*post_full_content*)
@@ -373,7 +482,7 @@
 
                 .special-ads-box .global-header-title {
                   width: 100%;
-                  font-size: 32px;
+                  font-size: 28px;
                   text-align: center;
                   text-shadow: 1px 1px 0 #000;
                 }
@@ -570,6 +679,11 @@
   <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="https://cdn.statically.io/gh/alireza-rou13/blogtheme/aba959be/js/jquery.js"></script>
+  <script>
+    var videos = document.getElementById("video-item");
+    videos.style.paddingLeft="8px";
+  </script>
+
   <script>
     const players = Array.from(document.querySelectorAll('#player')).map((p) => new Plyr(p));
   </script>
